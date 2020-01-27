@@ -44,6 +44,18 @@ module.exports = {
       options: {
         htmlTitle: `Fitnet | Content Management`
       }
-    }
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      }
+    },
+    `gatsby-transformer-remark`,
+
+    // MAKE SURE THIS IS LAST
+    `gatsby-plugin-netlify`
   ]
 }
