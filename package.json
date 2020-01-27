@@ -1,7 +1,7 @@
 {
   "name": "fitnet",
   "private": true,
-  "description": "A test project for assessing the speed and performance of streaming audio from a Git LFS source from NetlifyCMS.",
+  "description": "A test project for assessing the speed and performance of streaming audio from a Git LFS source using NetlifyCMS.",
   "version": "0.1.0",
   "author": "Kaleab S. Melkie <kaleabmelkie@gmail.com>",
   "dependencies": {

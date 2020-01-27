@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`
+    title: `Fitnet`,
+    description: `A test project for assessing the speed and performance of streaming audio from a Git LFS source using NetlifyCMS.`,
+    author: `@kaleabmelkie`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,11 +20,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Fitnet`,
+        short_name: `Fitnet`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#00b478`,
+        theme_color: `#00b478`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
@@ -39,6 +39,11 @@ module.exports = {
 
     `gatsby-plugin-sass`,
 
-    `gatsby-plugin-netlify-cms`
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        htmlTitle: `Fitnet | Content Management`
+      }
+    }
   ]
 }
