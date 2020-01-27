@@ -67,3 +67,12 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# IDEs
+.idea/
+.vscode/
+.vs/
+
+# GraphQL
+graphql-types.ts
+schema.graphql
