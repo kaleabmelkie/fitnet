@@ -76,3 +76,6 @@ yarn-error.log
 # GraphQL
 graphql-types.ts
 schema.graphql
+
+# Local Netlify folder
+.netlify
