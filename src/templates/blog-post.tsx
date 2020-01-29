@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 
 export default ({ data }: any) => {
-  console.log(data)
   const post = data.markdownRemark
   return (
     <Layout>
@@ -15,7 +14,7 @@ export default ({ data }: any) => {
           <p>
             <audio
               src={`http://stream-proxy-server.herokuapp.com/proxy?url=${
-                window.location.origin
+                window?.location.origin
               }${encodeURI(post?.frontmatter.audio)}`}
               controls
             />
