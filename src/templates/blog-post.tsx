@@ -1,21 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
 export default ({ data }: any) => {
+  const [origin, setOrigin] = useState<string>()
+  useEffect(() => {
+    setOrigin(window.location.origin)
+  }, [])
+
   const post = data.markdownRemark
   return (
     <Layout>
       <div>
         <h1>{post?.frontmatter.title}</h1>
 
-        {post?.frontmatter.audio && (
+        {post?.frontmatter.audio && origin !== undefined && (
           <p>
             <audio
-              src={`http://stream-proxy-server.herokuapp.com/proxy?url=${
-                window?.location.origin
-              }${encodeURI(post?.frontmatter.audio)}`}
+              src={`${process.env.GATSBY_STREAM_PROXY_PATH ||
+                'http://stream-proxy-server.herokuapp.com/proxy?url='}${origin}${encodeURI(
+                post?.frontmatter.audio
+              )}`}
               controls
             />
           </p>
