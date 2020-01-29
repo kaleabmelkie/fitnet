@@ -13,7 +13,12 @@ export default ({ data }: any) => {
 
         {post?.frontmatter.audio && (
           <p>
-            <audio src={post?.frontmatter.audio} controls />
+            <audio
+              src={`http://stream-proxy-server.herokuapp.com/proxy?url=${
+                window.location.origin
+              }${encodeURI(post?.frontmatter.audio)}`}
+              controls
+            />
           </p>
         )}
 
